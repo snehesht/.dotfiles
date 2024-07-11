@@ -1,0 +1,116 @@
+# $HOME/.config/alacritty/alacritty.toml
+
+# Theme
+import = [
+  # uncomment the flavour you want below:
+  # "~/.config/alacritty/catppuccin-latte.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
+  # "~/.config/alacritty/catppuccin-macchiato.toml"
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[shell]
+program = "/usr/bin/zsh"
+# args = [""]
+
+[window]
+opacity = 1.0
+padding.x = 10
+padding.y = 10
+decorations = "Full"
+title = "Terminal"
+dynamic_title = true
+# decorations_theme_variant = "Light" # "Dark"
+
+[font]
+normal.family = "JetBrainsMono NF"
+normal.style = "Light"
+bold.family = "JetBrainsMono NF"
+bold.style = "Medium"
+italic.family = "JetBrainsMono NF"
+italic.style = "Light Italic"
+bold_italic.family = "JetBrainsMono NF"
+bold_italic.style = "Medium Italic"
+size = 11.0
+
+[scrolling]
+history = 65535
+
+[selection]
+#semantic_escape_chars = ",│‘|:"' ()[]{}<>t"
+save_to_clipboard     = true
+
+[mouse]
+hide_when_typing      = true
+bindings = [
+  { mouse = "Middle", action = "PasteSelection" },
+]
+
+[cursor]
+blink_interval = 500
+thickness = 0.15
+
+[cursor.style]
+shape = "Block"
+blinking = "Always"
+
+[colors.cursor]
+text = "0x0a0c10"
+cursor = "0xfafafa"
+
+# [colors.primary]
+# background = "0x131619"
+# foreground = "0xf2f8ff"
+
+# [colors.normal]
+# black = "0x7a828e"
+# red = "0xff9492"
+# green = "0x26cd4d"
+# yellow = "0xf0b72f"
+# blue = "0x71b7ff"
+# magenta = "0xcb9eff"
+# cyan = "0x39c5cf"
+# white = "0xd9dee3"
+
+# [colors.bright]
+# black = "0x9ea7b3"
+# red = "0xffb1af"
+# green = "0x4ae168"
+# yellow = "0xf7c843"
+# blue = "0x91cbff"
+# magenta = "0xcb9eff"
+# cyan = "0x39c5cf"
+# white = "0xd9dee3"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "PasteSelection"
+key = "Insert"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
