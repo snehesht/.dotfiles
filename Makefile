@@ -2,6 +2,7 @@
 DOTFILES_DIR=$(shell pwd)
 CONFIG_DIR=$(shell echo "${HOME}/.config")
 
+# SHELL:=/usr/bin/zsh
 LOCAL_BIN:=$(DOTFILES_DIR)/bin
 PATH:=$(LOCAL_BIN):$(PATH)
 
@@ -41,10 +42,9 @@ setup_zsh: ## Setup ZSH shell
 	@eval zsh
 
 update_zsh: ## Update ZSH and Themes
-	@eval zsh
-	@eval zinit self-update
-	@eval zinit update
-	@eval zinit
+	eval zsh
+	eval zinit self-update
+	eval zinit update
 
 setup_alacritty: ## Copy Alacritty settings
 	@ln -sfn "${DOTFILES_DIR}/alacritty" ${ALACRITTY_CONFIG_DIR}
